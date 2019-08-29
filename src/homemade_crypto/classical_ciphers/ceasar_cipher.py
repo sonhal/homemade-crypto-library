@@ -16,11 +16,11 @@ class CaesarCipher:
         return CaesarCipher(NOR)
 
     @classmethod
-    def ascii_caesar(cls)-> "CaesarCipher":
+    def ascii_caesar(cls) -> "CaesarCipher":
         return CaesarCipher(ASCII)
 
     def gen_key(self):
-        return random.randint(1, len(self._key_space))
+        return random.randint(1, self._m)
 
     def encrypt(self, key, plain_text: str):
         letter_list = list(plain_text.upper())
