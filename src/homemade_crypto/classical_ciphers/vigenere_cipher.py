@@ -2,10 +2,11 @@ import random
 import itertools
 
 ASCII = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-NOR = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÆÅ'
+NOR = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅ'
 
 
 class VigenereCipher:
+    """ Implementation of the Vigenere Cipher"""
 
     def __init__(self, key_space):
         self._key_space = list(key_space)
