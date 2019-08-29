@@ -23,6 +23,7 @@ class CaesarCipher:
         return random.randint(1, self._m)
 
     def encrypt(self, key, plain_text: str):
+        key = int(key)
         letter_list = list(plain_text.upper())
         cipher_letter_list = []
         for letter in letter_list:
@@ -32,6 +33,7 @@ class CaesarCipher:
         return "".join(cipher_letter_list)
 
     def decrypt(self, key, cipher_text):
+        key = int(key)
         return self.encrypt(-key, cipher_text)
 
 
